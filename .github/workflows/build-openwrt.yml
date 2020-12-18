@@ -10,27 +10,8 @@
 name: 编译OpenWrt固件
 
 on:
-  workflow_dispatch:
-    inputs:
-      ssh:
-        description: 'SSH远程'
-        required: false
-        default: 'ssh-actions'
-      wxtz:
-        description: '微信通知'
-        required: false
-        default: 'wxtz-actions'
-      release:
-        description: '发布固件'
-        required: false
-        default: 'release-actions'
-
-
-
-# 点☆Star触发开始编译
-     watch:
-       types: started
-
+  watch:
+    types: started
 
 env: 
   REPO_TOKEN: ${{ secrets.REPO_TOKEN }}
